@@ -1,0 +1,519 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline:5%;
+}
+header h1{
+    display: flex;
+}
+header div {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+nav, nav ul, nav ul li{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+nav ul{
+    list-style-type: none;
+    color:rgb(240, 248, 255);
+    padding: 20px;
+}
+nav li{
+    margin-inline:10%;
+}
+nav li a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+header div  img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-inline: 20px;
+}
+a:hover{
+    text-decoration: none;
+}
+.active a{
+    color: rgb(10, 158, 109);
+}
+#panier-bloc{
+    border: 2px solid rgba(0,0,0,0.3);
+    padding-inline: 10px;
+    margin-inline: 10px;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+}
+#panier-bloc span{
+    padding-inline: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+}
+#panier-bloc:hover{
+    background-color: rgba(27, 65, 103, 0.663);
+}
+#panier-bloc h3 a{
+    text-decoration: none;
+}
+
+#presentation{
+    background-color: mediumslateblue;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#presentation p {
+    padding-inline:20px;
+    text-align:center;
+}
+#presentation p em {
+    font-weight: 800;
+}
+#presentation h1{
+    font-size: 4rem;
+    font-weight:800;
+    margin: 20px;
+}
+#neant p{
+    font-size: 25px;
+    text-align: center;
+    font-style: oblique;
+    padding-block-start: 20px;
+    font-weight: 700;
+}
+#produits{
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-inline: 10px;
+    padding-top: 50px;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    width: 95%; */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    width: 85%;
+    margin-inline: auto;
+}
+#global{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.produit::before{
+    box-shadow: 0 0 30px blueviolet;
+}
+.produit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    flex-direction: column;
+    margin-top: 20px;
+    background-size:100% 100% ;
+    background-position: center;
+    position: relative;
+    color:rgb(255, 0, 200);
+    /* margin-inline:10px; */
+}
+#produits #add-produit{
+    width: auto;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    height: auto;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#produits select{
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 10px;
+}
+#produits form{
+    position: absolute;
+    font-size: 18px;
+    right:50px;
+    /* width: 300px; */
+    top: 30px;
+    /* height: 30px; */
+}
+#pas-produit{
+    border: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+}
+#produits  input{
+    height: 30px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    padding-inline: 10px;
+}
+#produits  input[type="submit"]{
+    padding: 3px;
+}
+.produit p {
+    opacity: 0;
+}
+.produit h3,.produit p ,.produit div{
+    z-index: 100;
+    font-weight: bold;
+}
+.produit #lien {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.produit   img{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    z-index: 0;
+}
+.produit  a img{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    z-index: 0;
+}
+.produit:hover{
+    content: "Prix de ";
+    box-shadow: 0px 0px 10px black;
+    transition: 0.5s;
+}
+.produit:hover p{
+    opacity: 1;
+    transition: 0.5s;
+}
+.produit div{
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #0d3e93;
+    box-shadow: -1px 1px 7px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+.produit div:hover{
+    box-shadow: none;
+}
+.produit div a{
+    text-decoration: none;
+    color: slateblue;
+    transition: 0.5s;
+    color: white;
+}
+.produit div a:hover{
+    transition: 0.5s;
+    color: rgb(164, 161, 189);
+}
+#titreCommentaires{
+    text-align: center;
+    margin-block: 10px;
+}
+#commentaires{
+/*     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: space-around;
+    margin-block: 20px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-inline: 3vw;
+}
+#pasDeCommentaire{
+    text-align: center;
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.commentaire{
+    text-align: justify;
+    padding: 10px;
+    box-shadow: 0 0 10px #000000;
+    margin: 10px;
+}
+.commentaire div{
+    font-weight: 800;
+    padding-block-end: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.commentaire p {
+    font-weight: 500;
+    font-family:'Times New Roman', Times, serif;
+}
+.commentaire span{
+    display: inline-flex;
+    font-style: oblique;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-block-start: 10px;
+}
+#comment{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-block: 10px;
+}
+#comment input[type='text']{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    margin-inline: 20px;
+    padding-inline: 10px;
+}
+#comment input[type='submit']{
+    height: 40px;
+    padding-inline: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #334fdb;
+    color: #183898;
+    background-color: #6180de;
+    transition: 0.2s;
+    font-weight: 900;
+}
+#comment input[type='submit']:hover{
+    transition: 0.2s;
+    box-shadow: none;
+}
+
+footer{
+    background-color: rgb(6, 45, 111);
+    color: whitesmoke;
+    font-size: 20px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partie{
+    width: 300px;
+    height: 400px;
+    border: 1px solid rgb(67, 49, 49);
+    box-shadow: 0 0 10px rgb(15, 2, 2) ;
+    padding: 30px;
+    margin-block: 10px;
+}
+.partie h2{
+    color: cornflowerblue;
+    margin-block: 10px;
+}
+.partie p{
+    text-align:justify;
+    line-height: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    letter-spacing: 2px;
+}
+#a-propos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-block: 30px;
+}
+
+
+#update{
+    width: 100%;
+    padding: 30px;
+}
+#update form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#update form .group{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    align-items:baseline;
+    width: 40%;
+}
+#update form .group label{
+    font-size: 25px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+#update form .group input{
+    width:300px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 15px;
+    margin: 10px;
+}
+#update form .group input:focus{
+    border: 3px solid rgb(36, 65, 92);
+    box-shadow: 0 0 5px rgb(36, 65, 92);
+    transform: 0.5s;
+}
+#update form .group textarea{
+    resize: none ;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 500px;
+    padding: 20px;
+}
+#update form .group textarea:focus{
+    border: 3px solid rgb(36, 65, 92);
+    box-shadow: 0 0 5px rgb(36, 65, 92);
+    transform: 0.5s;
+}
+#update form .group input[type='file']{
+    width: auto;
+}
+#update form .group input[type='submit']{
+    background-color:#3b4f8b;
+    margin: auto;
+    padding: 0;
+    width: 200px;
+    color: #6180de;
+    cursor: pointer;
+}
+#update form .group input[type='submit']:hover{
+    background-color:#3d57a5;
+}
+#update form+a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+    color: #3d57a5;
+    transition: 0.2s;
+}
+#update form+a:hover{
+    transition: 0.2s;
+    color: #183898;
+    font-size: 26px;
+}
+#update form .group select{
+    border-radius: 20px;
+    padding:5px;
+    font-size: 15px;
+}
+
+/* 
+.titre{
+    text-align: center;
+    text-transform: uppercase;
+}
+.infos{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 80%;
+    height: 60vh;
+    margin-inline: auto;
+    padding: 30px;
+    box-shadow: 5px 5px 20px black;
+    background-color: rgb(58, 58, 112); */
+
+.infos input{
+    padding: 10px;
+    border-radius: 20px;
+    width: 200px;
+}
+.infos input:focus{
+    transition: 0.5s;
+    box-shadow: 0px 0px 6px black;
+}
+.line{
+    display: flex;
+    width: 80%;
+    align-items:center;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* background-color: rgb(178, 205, 228); */
+}
+.center{
+    text-align: center;
+}
+.center button{
+    margin-inline: 20px;
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px black;
+    width: 120px;
+}
+.center a{
+    text-decoration: none;
+    color: black;
+}
+.center button:hover{
+    transition: 0.5s;
+    box-shadow: none;
+}
+
+
+
+#container{
+    display: flex;
+/*    align-items: center;*/
+    gap: 20px;
+/*    justify-content: center;*/
+    flex-wrap: wrap;
+    padding-inline:10px;
+    padding-block-start: 20px;
+}
+#left{
+    width: 400px;
+    height: 200px;
+}
+#left img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgb(78, 85, 88);
+}
+#right{
+   box-shadow: 0 0 20px rgb(78, 85, 88);
+   padding: 30px; 
+   width: calc(100% - 450px);
+   font-style: oblique;
+   font-size: 20px;
+   font-weight: 500;
+   letter-spacing: 2px;
+   line-height: 30px;
+   position: relative;
+}
+#right a {
+    text-decoration: none;
+    font-family: Calibri;
+    letter-spacing: initial;
+    font-style: normal;
+    color: #758419;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

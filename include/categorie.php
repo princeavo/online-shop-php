@@ -1,0 +1,17 @@
+<?php $categories = [
+                "Électronique",
+                "Mode et vêtements",
+                "Maison et jardin",
+                "Beauté et soins personnels",
+                "Jouets et jeux",
+                "Sports et loisirs",
+                "Livres et médias",
+                "Automobile et accessoires",
+                "Alimentation et boissons",
+                "Santé et bien-être",
+                "Bijoux et montres",
+                "Art et artisanat",
+                "Équipement informatique",
+                "Musique et instruments",
+                "Bébés et enfants",
+            ];
